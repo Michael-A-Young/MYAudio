@@ -60,6 +60,20 @@ include(StaticAnalysis)
 
 add_executable(
 	MYAudio
+	src/AudioDecoder/AudioDecoder.cpp
+	src/AudioDecoder/WAVDecoder.cpp
+	src/AudioDevice/AudioDevice.cpp
+	src/AudioSource/AudioSource.cpp
+	src/AudioSource/BufferSource.cpp
+	src/AudioSource/GeneratorSource.cpp
+	src/AudioSource/StreamSource.cpp
+	src/AudioBus.cpp
+	src/AudioManager.cpp
+	src/BusManager.cpp
+	src/Channel.cpp
+	src/ChannelManager.cpp
+	src/Sound.cpp
+	src/SoundManager.cpp
 	src/main.cpp
 )
 
