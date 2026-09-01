@@ -1,49 +1,11 @@
-# MYTemplate
+# MYAudio
 
-A basic C++23 project template using CMake and Ninja.
+A low-level, cross-platform C++ audio library.
 
-## Requirements
+MYAudio is intended to provide a clean abstraction over platform audio APIs and audio file formats, while remaining deliberately below the level of a full game audio engine.
 
-* CMake
-* Ninja
-* GCC and/or Clang
+## Status
 
-## Build
+MYAudio is a personal and experimental architecture project and is under active development. It is primarily a learning project, but I also hope to use MYAudio as an embeddable audio layer in my future projects.
 
-List the available presets:
-
-```bash
-cmake --list-presets
-```
-
-Configure and build, for example with Clang:
-
-```bash
-cmake --preset debug-clang
-cmake --build --preset debug-clang
-```
-
-Run the program:
-
-```bash
-./build/debug-clang/MYTemplate
-```
-
-Available configurations include:
-
-* `debug-gcc`
-* `debug-clang`
-* `release-gcc`
-* `release-clang`
-* `asan-gcc`
-* `asan-clang`
-* `ubsan-gcc`
-* `ubsan-clang`
-* `tsan-gcc`
-* `tsan-clang`
-* `asan-ubsan-gcc`
-* `asan-ubsan-clang`
-* `tsan-ubsan-gcc`
-* `tsan-ubsan-clang`
-* `clang-tidy`
-
+This is primarily a learning project, but I also hope to use MYAudio as an embeddable audio layer in future projects.
