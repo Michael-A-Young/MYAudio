@@ -3,8 +3,10 @@ Checks: >
   performance-*,
   portability-*,
   readability-*,
-  modernize-*
-  -modernize-use-trailing-return-type
+  modernize-*,
+  -modernize-use-equals-default,
+  -modernize-use-trailing-return-type,
+  -readability-redundant-member-init
 
 WarningsAsErrors: ''
 
