@@ -19,29 +19,29 @@ Summary:
 #include <utility>
 
 #if MY_COMPILER_MSVC
-#define MY_TRAP()                                                             \
-	do                                                                        \
-	{                                                                         \
-		__debugbreak();                                                       \
-	} while (false)
+	#define MY_TRAP()                                                         \
+		do                                                                    \
+		{                                                                     \
+			__debugbreak();                                                   \
+		} while (false)
 #elif MY_COMPILER_CLANG
-#define MY_TRAP()                                                             \
-	do                                                                        \
-	{                                                                         \
-		__builtin_debugtrap();                                                \
-	} while (false)
+	#define MY_TRAP()                                                         \
+		do                                                                    \
+		{                                                                     \
+			__builtin_debugtrap();                                            \
+		} while (false)
 #elif MY_COMPILER_GCC
-#define MY_TRAP()                                                             \
-	do                                                                        \
-	{                                                                         \
-		__builtin_trap();                                                     \
-	} while (false)
+	#define MY_TRAP()                                                         \
+		do                                                                    \
+		{                                                                     \
+			__builtin_trap();                                                 \
+		} while (false)
 #else
-#define MY_TRAP()                                                             \
-	do                                                                        \
-	{                                                                         \
-		std::raise(SIGABRT);                                                  \
-	} while (false)
+	#define MY_TRAP()                                                         \
+		do                                                                    \
+		{                                                                     \
+			std::raise(SIGABRT);                                              \
+		} while (false)
 #endif // MY_COMPILER_*
 
 enum class MYLogLevel : uint8_t

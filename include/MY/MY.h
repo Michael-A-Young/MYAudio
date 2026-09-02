@@ -9,11 +9,11 @@ Summary:
 #define MY_H
 
 #ifndef MY_DEBUG
-#define MY_DEBUG 0
+	#define MY_DEBUG 0
 #endif
 
 #ifndef MY_RELEASE
-#define MY_RELEASE 0
+	#define MY_RELEASE 0
 #endif
 
 #include "Compiler.h"
