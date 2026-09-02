@@ -9,6 +9,7 @@ Checks: >
   -modernize-use-equals-default,
   -modernize-use-trailing-return-type,
   -readability-identifier-length,
+  -readability-redundant-access-specifiers,
   -readability-redundant-member-init,
   -readability-use-concise-preprocessor-directives
 
