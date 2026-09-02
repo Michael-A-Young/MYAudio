@@ -49,11 +49,11 @@ bool XAudio2Device::Pause()
 	return false;
 }
 
-void XAudio2Device::SetVolume(float volume)
+void XAudio2Device::SetVolume(float /*volume*/)
 {
 }
 
-void XAudio2Device::SetPitch(float pitch)
+void XAudio2Device::SetPitch(float /*pitch*/)
 {
 }
 
