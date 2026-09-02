@@ -32,6 +32,7 @@ void PipeWireDevice::Initialise()
 
 void PipeWireDevice::Shutdown()
 {
+	pw_deinit();
 }
 
 DeviceVoice* PipeWireDevice::CreateVoice()
