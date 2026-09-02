@@ -8,11 +8,8 @@
 // MYAudio
 #include "main.h"
 
-// Standard Library
-#include <iostream>
-
 int main(int /*argc*/, char** /*argv*/)
 {
-	std::cout << "Hello, world!\n";
+	MY_LOG("Hello, world!");
 	return 0;
 }
