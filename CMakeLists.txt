@@ -114,6 +114,13 @@ set_target_properties(
     CXX_EXTENSIONS OFF
 )
 
+target_compile_definitions(
+    MYAudio
+    PRIVATE
+    $<$<CONFIG:Debug>:MY_DEBUG>
+    $<$<CONFIG:Release>:MY_RELEASE>
+)
+
 # ---------------------------------------------------------------------------
 # Warnings / sanitizers / static analysis
 # ---------------------------------------------------------------------------
