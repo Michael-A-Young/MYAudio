@@ -83,6 +83,24 @@ target_include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
+if (WIN32)
+    target_sources(
+        MYAudio
+        PRIVATE
+		src/AudioDevice/XAudio2Device.cpp
+    )
+elseif (APPLE)
+    target_sources(
+        MYAudio
+        PRIVATE
+    )
+elseif (UNIX)
+    target_sources(
+        MYAudio
+        PRIVATE
+    )
+endif ()
+
 # ---------------------------------------------------------------------------
 # Project configuration
 # ---------------------------------------------------------------------------
