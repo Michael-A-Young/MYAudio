@@ -4,9 +4,13 @@ Checks: >
   portability-*,
   readability-*,
   modernize-*,
+  -bugprone-exception-escape,
+  -modernize-avoid-c-arrays,
   -modernize-use-equals-default,
   -modernize-use-trailing-return-type,
-  -readability-redundant-member-init
+  -readability-identifier-length,
+  -readability-redundant-member-init,
+  -readability-use-concise-preprocessor-directives
 
 WarningsAsErrors: ''
 
