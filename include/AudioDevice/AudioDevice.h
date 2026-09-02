@@ -11,6 +11,8 @@
 namespace MY
 {
 
+using DeviceVoice = void;
+
 class AudioDevice
 {
 public:
@@ -28,12 +30,12 @@ public:
 	virtual void Initialise() = 0;
 	virtual void Shutdown() = 0;
 
-	virtual DeviceVoice* CreateVoice(); = 0;
+	virtual DeviceVoice* CreateVoice() = 0;
 	virtual bool SubmitBuffer() = 0;
 
-	virtual void Start() = 0;
-	virtual void Stop() = 0;
-	virtual void Pause() = 0;
+	virtual bool Start() = 0;
+	virtual bool Stop() = 0;
+	virtual bool Pause() = 0;
 
 	virtual void SetVolume(float volume) = 0;
 	virtual void SetPitch(float pitch) = 0;

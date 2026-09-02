@@ -31,12 +31,12 @@ public:
 	void Initialise() override;
 	void Shutdown() override;
 
-	DeviceVoice* CreateVoice(); override;
+	DeviceVoice* CreateVoice() override;
 	bool SubmitBuffer() override;
 
-	void Start() override;
-	void Stop() override;
-	void Pause() override;
+	bool Start() override;
+	bool Stop() override;
+	bool Pause() override;
 
 	void SetVolume(float volume) override;
 	void SetPitch(float pitch) override;
