@@ -9,6 +9,7 @@ Summary:
 #define MY_H
 
 #include "Config.h"
+#include "Arch.h"
 #include "Compiler.h"
 #include "Platform.h"
 #include "Debug.h"
