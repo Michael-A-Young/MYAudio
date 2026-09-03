@@ -111,7 +111,8 @@ void MYLogFunc(MYLogLevel level, const char* caller,
 
 #else
 
-#define MY_LOG(severity, message, ...)
+#define MY_LOG_MESSAGE(severity, message, ...)
+#define MY_LOG(message, ...)
 #define MY_TRAP()
 #define MY_ASSERT(expression, message, ...)
 #define MY_EXPECT(expression, message, ...)
