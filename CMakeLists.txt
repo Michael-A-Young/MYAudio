@@ -60,7 +60,7 @@ include(Platform)
 # ---------------------------------------------------------------------------
 
 add_executable(
-	MYAudio
+	${PROJECT_NAME}
 	include/MY/Debug.cpp
 	src/AudioDecoder/AudioDecoder.cpp
 	src/AudioDecoder/WAVDecoder.cpp
@@ -80,27 +80,27 @@ add_executable(
 )
 
 target_include_directories(
-	MYAudio
+	${PROJECT_NAME}
 	PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-MY_setup_platform(MYAudio)
+MY_setup_platform(${PROJECT_NAME})
 
 # ---------------------------------------------------------------------------
 # Project configuration
 # ---------------------------------------------------------------------------
 
-target_compile_features(MYAudio PRIVATE cxx_std_23)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
 
 set_target_properties(
-	MYAudio
+	${PROJECT_NAME}
 	PROPERTIES
     CXX_EXTENSIONS OFF
 )
 
 target_compile_definitions(
-    MYAudio
+    ${PROJECT_NAME}
     PRIVATE
     $<$<CONFIG:Debug>:MY_DEBUG>
     $<$<CONFIG:Release>:MY_RELEASE>
@@ -110,6 +110,6 @@ target_compile_definitions(
 # Warnings / sanitizers / static analysis
 # ---------------------------------------------------------------------------
 
-MY_configure_warnings(MYAudio)
-MY_configure_sanitisers(MYAudio)
-MY_configure_static_analysis(MYAudio)
+MY_configure_warnings(${PROJECT_NAME})
+MY_configure_sanitisers(${PROJECT_NAME})
+MY_configure_static_analysis(${PROJECT_NAME})
