@@ -73,6 +73,15 @@ function(MY_setup_platform TARGET)
 				"-Wno-c99-extensions;-Wno-missing-designated-field-initializers;-Wno-gnu-statement-expression-from-macro-expansion"
 			)
 
+		elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+
+			set_source_files_properties(
+				src/AudioDevice/PipeWireDevice.cpp
+				PROPERTIES
+				COMPILE_OPTIONS
+				"-Wno-missing-field-initializers"
+			)
+
 		endif ()
 
     endif()
