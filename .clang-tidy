@@ -4,14 +4,19 @@ Checks: >
   portability-*,
   readability-*,
   modernize-*,
+  -bugprone-easily-swappable-parameters,
   -bugprone-exception-escape,
   -modernize-avoid-c-arrays,
   -modernize-use-auto,
+  -modernize-use-default-member-init,
   -modernize-use-equals-default,
+  -modernize-use-nodiscard,
   -modernize-use-trailing-return-type,
+  -readability-convert-member-functions-to-static,
   -readability-identifier-length,
   -readability-redundant-access-specifiers,
   -readability-redundant-member-init,
+  -readability-uppercase-literal-suffix,
   -readability-use-concise-preprocessor-directives
 
 WarningsAsErrors: ''

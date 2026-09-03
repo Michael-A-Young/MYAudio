@@ -8,6 +8,9 @@
 #ifndef MY_AUDIO_SOURCE_H
 #define MY_AUDIO_SOURCE_H
 
+// Standard Library
+#include <cstdint>
+
 namespace MY
 {
 
@@ -24,7 +27,16 @@ public:
 
 	virtual ~AudioSource() = default;
 
-private:
+public:
+	virtual uint64_t Read(float* outPCM, uint64_t frames) = 0;
+	virtual bool Seek(uint64_t frames) = 0;
+
+	virtual uint64_t GetLength() const = 0;
+	virtual uint64_t GetFrame() const = 0;
+
+	virtual bool IsFinished() const = 0;
+	virtual bool IsInfinite() const = 0;
+
 };
 
 } // namespace MY

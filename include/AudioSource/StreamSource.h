@@ -26,7 +26,14 @@ public:
 
 	~StreamSource() override = default;
 
-private:
+public:
+	uint64_t Read(float* outPCM, uint64_t frames) override;
+	bool Seek(uint64_t frames) override;
+	uint64_t GetLength() const override;
+	uint64_t GetFrame() const override;
+
+	bool IsFinished() const override;
+	bool IsInfinite() const override;
 };
 
 } // namespace MY

@@ -24,7 +24,19 @@ public:
 
 	~AudioBus() = default;
 
+public:
+	void SetVolume(float volume);
+	void SetMuted(bool muted);
+	void SetParent(AudioBus* parent);
+
+	float GetVolume() const;
+	bool IsMuted() const;
+	AudioBus* GetParent() const;
+
 private:
+	AudioBus* mParent;
+	float mVolume;
+	bool mMuted;
 };
 
 } // namespace MY

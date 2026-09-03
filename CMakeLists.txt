@@ -67,10 +67,10 @@ add_executable(
 	src/AudioDevice/AudioDevice.cpp
 	src/AudioSource/AudioSource.cpp
 	src/AudioSource/BufferSource.cpp
-	src/AudioSource/GeneratorSource.cpp
 	src/AudioSource/StreamSource.cpp
 	src/AudioBus.cpp
 	src/AudioManager.cpp
+	src/AudioMixer.cpp
 	src/BusManager.cpp
 	src/Channel.cpp
 	src/ChannelManager.cpp

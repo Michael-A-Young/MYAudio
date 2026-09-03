@@ -8,6 +8,11 @@
 #ifndef MY_SOUND_MANAGER_H
 #define MY_SOUND_MANAGER_H
 
+// MYAudio
+#include "AudioTypes.h"
+#include "HandlePool.h"
+#include "Sound.h"
+
 namespace MY
 {
 
@@ -24,7 +29,15 @@ public:
 
 	~SoundManager() = default;
 
+public:
+	SoundHandle Load();
+	void Unload(SoundHandle sound);
+	void Prime(SoundHandle sound, size_t maxBytes = 0);
+
+	bool IsLoaded(SoundHandle sound) const;
+
 private:
+	HandlePool<Sound, SoundHandle> mSoundPool;
 };
 
 } // namespace MY

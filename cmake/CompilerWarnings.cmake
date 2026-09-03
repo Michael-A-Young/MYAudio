@@ -33,6 +33,7 @@ function(MY_configure_warnings TARGET)
 			-Wall
 			-Wextra
 			-Wpedantic
+			-Wno-unused-parameter
 		)
 
 		if(MY_WARNINGS_AS_ERRORS)
