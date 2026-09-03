@@ -239,7 +239,7 @@
                 "clang",
                 "tidy"
             ],
-            "binaryDir": "${sourceDir}/build/tidy-clang"
+            "binaryDir": "${sourceDir}/build/clang-tidy"
         }
     ],
 
