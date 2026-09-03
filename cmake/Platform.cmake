@@ -64,6 +64,17 @@ function(MY_setup_platform TARGET)
             PkgConfig::PIPEWIRE
         )
 
+		if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+
+			set_source_files_properties(
+				src/AudioDevice/PipeWireDevice.cpp
+				PROPERTIES
+				COMPILE_OPTIONS
+				"-Wno-c99-extensions;-Wno-missing-designated-field-initializers;-Wno-gnu-statement-expression-from-macro-expansion"
+			)
+
+		endif ()
+
     endif()
 
 endfunction()

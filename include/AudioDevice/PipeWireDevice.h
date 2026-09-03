@@ -11,6 +11,9 @@
 // MYAudio
 #include "AudioDevice.h"
 
+// PipeWire
+#include "pipewire/pipewire.h"
+
 namespace MY
 {
 
@@ -41,7 +44,21 @@ public:
 	void SetVolume(float volume) override;
 	void SetPitch(float pitch) override;
 
+public:
+	struct PipeWireData
+	{
+        struct pw_main_loop* loop;
+        struct pw_stream* stream;
+        double accumulator;
+	};
+
 private:
+	static constexpr size_t kBufferSize = 1024;
+	static constexpr uint32_t kDefaultChannels = 2;
+	static constexpr uint32_t kDefaultRate = 44100;
+
+	PipeWireData mData;
+	pw_stream_events mStreamEvents;
 };
 
 } // namespace MY
