@@ -6,6 +6,7 @@ Checks: >
   modernize-*,
   -bugprone-exception-escape,
   -modernize-avoid-c-arrays,
+  -modernize-use-auto,
   -modernize-use-equals-default,
   -modernize-use-trailing-return-type,
   -readability-identifier-length,
