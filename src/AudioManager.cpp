@@ -13,6 +13,7 @@ namespace MY
 
 AudioManager::AudioManager()
 	: mDevice()
+	, mMixer()
 	, mSoundManager()
 	, mChannelManager()
 	, mBusManager()

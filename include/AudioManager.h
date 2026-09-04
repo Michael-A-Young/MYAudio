@@ -10,6 +10,7 @@
 
 // MYAudio
 #include "AudioDevice/AudioDevice.h"
+#include "AudioMixer.h"
 #include "AudioTypes.h"
 #include "BusManager.h"
 #include "ChannelManager.h"
@@ -79,6 +80,7 @@ public:
 
 private:
 	AudioDevice* mDevice;
+	AudioMixer mMixer;
 	SoundManager mSoundManager;
 	ChannelManager mChannelManager;
 	BusManager mBusManager;
