@@ -2,13 +2,15 @@
 @file
 	HandlePool.h
 @brief
-	Manages a pool of resources via handles.
+	Manages a generational pool of resources via handles.
 */
 
 #ifndef MY_HANDLE_POOL_H
 #define MY_HANDLE_POOL_H
 
 // Standard Library
+#include <cstdint>
+#include <optional>
 #include <vector>
 
 namespace MY
@@ -18,7 +20,7 @@ template <typename Resource, typename Handle>
 class HandlePool
 {
 public:
-	HandlePool();
+	HandlePool(size_t initialCapacity);
 
 	HandlePool(const HandlePool& other) = default;
 	HandlePool(HandlePool&& other) = default;
@@ -29,21 +31,25 @@ public:
 	~HandlePool() = default;
 
 public:
-	Resource Get(Handle handle);
-	Handle Store(Resource resource);
+	const Resource* Get(Handle handle) const;
+	Resource* Get(Handle handle);
+
+	template <typename... Args>
+	Handle Create(Args&&... args);
+	void Remove(Handle handle);
 
 	bool IsValid(Handle handle);
 
 private:
 	struct Slot
 	{
-		Resource resource;
+		std::optional<Resource> resource;
 		uint32_t generation;
-		bool valid;
 	};
 
 private:
-	std::vector<Slot> mData;
+	std::vector<Slot> mSlots;
+	std::vector<uint32_t> mFreeIndices;
 };
 
 } // namespace MY

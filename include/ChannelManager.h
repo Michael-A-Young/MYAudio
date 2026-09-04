@@ -56,6 +56,8 @@ public:
 	bool IsValid(ChannelHandle channel) const;
 
 private:
+	static constexpr size_t kInitialMaxChannels = 16;
+
 	HandlePool<Channel, ChannelHandle> mChannelPool;
 };
 

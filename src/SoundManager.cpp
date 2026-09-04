@@ -12,7 +12,7 @@ namespace MY
 {
 
 SoundManager::SoundManager()
-	: mSoundPool()
+	: mSoundPool(kInitialMaxSounds)
 {
 }
 

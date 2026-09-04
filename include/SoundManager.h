@@ -37,6 +37,8 @@ public:
 	bool IsLoaded(SoundHandle sound) const;
 
 private:
+	static constexpr size_t kInitialMaxSounds = 16;
+	
 	HandlePool<Sound, SoundHandle> mSoundPool;
 };
 

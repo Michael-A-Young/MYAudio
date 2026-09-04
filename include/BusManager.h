@@ -48,7 +48,9 @@ public:
 private:
 	void CreateMasterBus();
 
-private:
+private:	
+	static constexpr size_t kInitialMaxBuses = 8;
+
 	HandlePool<AudioBus, BusHandle> mBusPool;
 };
 

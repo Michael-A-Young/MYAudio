@@ -12,7 +12,7 @@ namespace MY
 {
 
 BusManager::BusManager()
-	: mBusPool()
+	: mBusPool(kInitialMaxBuses)
 {
 }
 

@@ -12,7 +12,7 @@ namespace MY
 {
 
 ChannelManager::ChannelManager()
-	: mChannelPool()
+	: mChannelPool(kInitialMaxChannels)
 {
 }
 
