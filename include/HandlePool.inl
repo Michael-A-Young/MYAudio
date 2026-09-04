@@ -56,6 +56,7 @@ Handle HandlePool<Resource, Handle>::Create(Args&&... args)
 	else
 	{
 		index = static_cast<uint32_t>(mSlots.size());
+		mSlots.emplace_back(std::nullopt, 0);
 	}
 
 	Slot& slot = mSlots[index];
