@@ -55,6 +55,8 @@ Handle HandlePool<Resource, Handle>::Create(Args&&... args)
 	}
 	else
 	{
+		MY_LOG("Exceeded pool capacity ({})", mSlots.size());
+
 		index = static_cast<uint32_t>(mSlots.size());
 		mSlots.emplace_back(std::nullopt, 0);
 	}
